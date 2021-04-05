@@ -8,6 +8,15 @@ for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 		table.insert(tools, v.Name)
 	end
 end
+
+local customColors = {
+    SchemeColor = Color3.fromRGB(0,255,255),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+
 local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local window = ui.CreateLib("Blox Fruits", getgenv().ThemeOption)
 
@@ -41,7 +50,7 @@ settingsSection:NewKeybind("Toggle UI", "Toggle UI off/on", Enum.KeyCode.F, func
 	ui:ToggleUI()
 end)
 
-for theme, color in pairs(getgenv().customColors) do
+for theme, color in pairs(customColors) do
     themeSection:NewColorPicker(theme, "Change your "..theme, Color3.fromRGB(255,255,255), function(color3)
         ui:ChangeColor(theme, color3)
     end)
