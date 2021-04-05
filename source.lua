@@ -41,7 +41,7 @@ settingsSection:NewKeybind("Toggle UI", "Toggle UI off/on", Enum.KeyCode.F, func
 	ui:ToggleUI()
 end)
 
-for theme, color in pairs(customColors) do
+for theme, color in pairs(getgenv().customColors) do
     themeSection:NewColorPicker(theme, "Change your "..theme, Color3.fromRGB(255,255,255), function(color3)
         ui:ChangeColor(theme, color3)
     end)
