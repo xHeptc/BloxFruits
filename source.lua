@@ -9,6 +9,8 @@ for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 	end
 end
 
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local window = ui.CreateLib("Blox Fruits", getgenv().ThemeOption)
 local customColors = {
     SchemeColor = Color3.fromRGB(0,255,255),
     Background = Color3.fromRGB(0, 0, 0),
@@ -16,10 +18,6 @@ local customColors = {
     TextColor = Color3.fromRGB(255,255,255),
     ElementColor = Color3.fromRGB(20, 20, 20)
 }
-
-local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local window = ui.CreateLib("Blox Fruits", getgenv().ThemeOption)
-
 --------------------
 getgenv().AutoQuest = false
 getgenv().AutoFarming = false
